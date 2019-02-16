@@ -1,0 +1,2 @@
+filter是使用bitset的，bool也是使用bitset方式的。
+query是使用倒排序的fst，多条件过滤时，使用bitset或者skiplist，而使用skiplist时，即使 使用=条件的磁盘搜索，也会比较快。但此时消耗了磁盘io，高并发下需考虑这一点。
